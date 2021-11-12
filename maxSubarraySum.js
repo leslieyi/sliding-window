@@ -6,6 +6,7 @@
 
 function maxSubarraySum(array, num) {
   if (array.length < num) return null; //edge case
+  if (array.length === 1 && num === 1) return array[0]; //edge case
 
   let maxSum = 0;
   let tempSum = 0;
@@ -23,3 +24,5 @@ function maxSubarraySum(array, num) {
 }
 
 console.log(maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3))
+console.log(maxSubarraySum([2], 1))
+
